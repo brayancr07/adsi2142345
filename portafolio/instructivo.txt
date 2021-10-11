@@ -1,0 +1,12 @@
+1.para visualizar el portafolio ingresar al repositorio:https://github.com/brayancr07/adsi2142345
+2.ingresar a la carpeta portafolio
+3-exportar la base de datos en la carpeta base de datos
+4.abrir en google chorme el index.html
+5.en el url colocar http://localhost/portafolio/index.html#
+5.abrir el menu interactuar en la pagina
+6.en el menu se interactua del punto 6-12home es la casa
+7.sobre mi es contenido de mi
+8.servicios lo que se en programacion 
+9.trabajo es el crud
+10 manuelaes no los eh hecho
+11java es los puntos de trabajo ejercicios en javascript
