@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="imagen/front-end.png">
+	<title>Ejercicios</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="stilo.css">
+	<pre>
+	<hr>
+<h1>Funcion Flecha</h1>
+<hr>
+<pre>función  saludo1 ( ) {
+    volver  'hola' ;
+}
+
+consola . log ( '...' + saludo1 ( ) ) ;
+
+función  saludo2 ( ) {
+    consola . log ( 'hola' ) ;
+}
+saludo2 ( ) ;
+
+var  greet1 = ( ) => consola . log ( 'hola' ) ;
+var  greet2 = ( ) => 'Hola desde flecha' ;
+consola . log ( '------' + saludar2 ( ) ) ;
+// funciones con un parametro
+
+función  cuad ( num ) {
+return  num * num ;
+}
+const  cuadrado = num => num * num ;
+consola . log ( cuadrado ( 10 ) ) ;
+// funcion con mas de un parámetro
+función  suma ( x , y ) {
+return  x + y ;
+}
+
+ suma constante = ( x , y ) => x + y ;
+consola . log ( suma ( 10 , 20 ) ) ;</pre>
+<hr>
+<h1>Ejercicio Biblioteca</h1>
+<hr>
+<h1>Material</h1>
+<hr>
+<pre><? php 
+class  Material {
+protegido  $ tipoMaterial = '' ;
+protegido  $ codigo = '' ;
+protegido  $ autor = '' ;
+protegido  $ titulo = '' ;
+protegido  $ año = 0 ;
+protegido  $ estado = '' ;
+
+function  __construct ( $ tipoMaterial , $ codigo , $ autor , $ titulo , $ año , $ status ) {
+$ esto -> tipoMaterial = $ tipoMaterial ;
+$ esto -> codigo = $ codigo ;
+$ esto -> autor = $ autor ;
+$ esto -> titulo = $ titulo ;
+$ esto -> año = $ año ;
+$ esto -> estado = $ estado ;
+}
+
+ función  datos () {
+     volver  'TIPO DE MATERIAL:' . $ esto -> tipoMaterial . '<br>' . 'CODIGO:' . $ esto -> codigo . '<br>' . 'AUTOR:' . $ esto -> autor . '<br>' . 'TITULO:' . $ esto -> titulo . '<br>' . 'AÑO:' . $ esto -> año . '<br>' . ' ESTADO: ' . $ esto ->estado ;
+ }
+
+}
+?>
+<hr>
+<h1>Libro</h1>
+<hr>
+<? php 
+
+incluir ( 'material.php' );
+
+clase  Libro  extiende  Material {
+    
+      editorial privada $ ;
+     private  $ numeroPaginas ;
+     private  $ numeroCapitulos ;
+        
+function  __construct ( $ tipoMaterial , $ codigo , $ autor , $ titulo , $ año , $ status , $ editorial , $ numeroPaginas , $ numeroCapitulos ) {
+    parent :: __construct ( $ tipoMaterial , $ codigo , $ autor , $ titulo , $ año , $ status );
+    $ esto -> editorial = $ editorial ;
+    $ esto -> numeroPaginas = $ numeroPaginas ;
+    $ esto -> numeroCapitulos = $ numeroCapitulos ;
+}
+    function  setEditorial ( $ editorial ) {        
+        $ esto -> editorial = $ editorial ;
+    }
+    function  setnumeroPaginas ( $ numeroPaginas ) {
+        $ esto -> numeroPaginas = $ numeroPaginas ;
+    }
+    function  setnumeroCapitulos ( $ numeroCapitulos ) {
+        $ esto -> numeroCapitulos = $ numeroCapitulos ;
+    }
+    function  getEditorial () {
+        return  $ this -> editorial ;
+    }
+    function  getnumeroPaginas () {
+        return  $ this -> numeroPaginas ;
+    }
+    function  getnumeroCapitulos () {
+        return  $ this -> numeroCapitulos ;
+    }
+
+    function  getAutor () {
+        devuelve  $ esto -> autor ;
+    }
+}
+$ ob = nuevo  Libro ( 'papel' , 'ISBN 958-96700-0-8' , 'Julio Verne' , 'Viaje al centro de la tierra' , 1865 , 'Buen estado' , 'EDITORIAL cupido' , '117' , '19' );
+echo  $ ob -> datos ();
+echo  '<br>' ;
+echo  'EDITORIAL:' . $ ob -> getEditorial ();
+echo  '<br>' ;
+echo  'NUMERO DE PAGINAS:' . $ ob -> getnumeroPaginas ();
+echo  '<br>' ;    
+echo  'NUMERO DE CAPITULOS:' . $ ob -> getnumeroCapitulos ();
+echo  '<br>' ;
+?>
+<hr>
+<h1>Revista</h1>
+<hr>
+<? php 
+incluir ( 'material.php' );
+clase  Revista  extiende  Material {
+      tema $ privado ;
+     private  $ fechaPublicacion ;
+     privado  $ LugarPublicacion ;
+     private  $ numeroEdicion ;
+        
+function  __construct ( $ tipoMaterial , $ codigo , $ autor , $ titulo , $ año , $ status , $ tema , $ fechaPublicacion , $ LugarPublicacion , $ numeroEdicion ) {
+    parent :: __construct ( $ tipoMaterial , $ codigo , $ autor , $ titulo , $ año , $ status );
+    $ esto -> tema = $ tema ;
+    $ esto -> fechaPublicacion = $ fechaPublicacion ;
+    $ this -> lugarPublicacion = $ LugarPublicacion ;
+    $ esto -> numeroEdicion = $ numeroEdicion ;
+}
+    function  setTema ( $ tema ) {
+        $ esto -> tema = $ tema ;
+    }
+    function  setFechaPublicacion ( $ fechaPublicacion ) {
+        $ esto -> fechaPublicacion = $ fechaPublicacion ;
+    }
+    function  setLugarPublicacion ( $ LugarPublicacion ) {
+        $ this -> lugarPublicacion = $ LugarPublicacion ;
+    }
+    function  setNumeroEdicion ( $ numeroEdicion ) {
+        $ esto -> numeroEdicion = $ numeroEdicion ;
+    }
+    function  getTema () {
+        devuelve  $ esto -> tema ;
+    }
+    function  getFechaPublicacion () {
+        return  $ this -> fechaPublicacion ;
+    }
+    function  getLugarPublicacion () {
+        return  $ this -> lugarPublicacion ;
+    }
+    function  getNumeroEdicion () {
+        return  $ this -> numeroEdicion ;
+    }
+}
+$ ob = new  Revista ( 'papel estucado' , 'ISSN 0028-0836' , 'Pepe Perez' , 'nature' , 2020 , 'Buen estado' , 'Cientifico' , '03-09-2021 ' , ' EEUU ' , '19' );
+echo  $ ob -> datos ();
+echo  '<br>' ;
+echo  'Tema:' . $ ob -> getTema ();
+echo  '<br>' ;
+echo  'Fecha de publicación:' . $ ob -> getFechaPublicacion ();
+echo  '<br>' ;    
+echo  'Lugar de publicacion:' . $ ob -> getLugarPublicacion ();
+echo  '<br>' ;
+echo  'Numero de edición:' . $ ob -> getNumeroEdicion ();
+echo  '<br>' ;
+?>
+<hr>
+<h1>Biblioteca</h1>
+<? php
+incluir ( 'libro.php' );
+clase  Biblioteca {
+     coleccion $ privada ;    
+
+    función  __construct () {
+        $ esto -> coleccion = array ();
+    }
+    
+    función  adicionar ( $ material ) {
+        array_push ( $ esto -> colección , $ material );
+    }
+
+    function  verMateriales () {
+        para ( $ i = 0 ; $ i < contar ( $ esto -> colección ); $ i ++) {
+            echo  $ this -> coleccion [ $ i ] -> getAutor ();
+        }
+    }
+    
+}
+
+$ biblio = nueva  Biblioteca ();
+$ ob1 = nuevo  Libro ( 'virtual' , 'ISBN 856-96700-0-9' , 'Gabo' , '100 años de soledad' , 1978 , 'Buen estado' , 'EDITORIAL Planeta' , '200' , '20 ' );
+
+$ biblio -> adicionar ( $ ob );
+$ biblio -> adicionar ( $ ob1 );
+
+$ biblio -> verMateriales ();
+
+?>
+<hr>
+<h1>Programacion Orientada A Objetos (POO)</h1>
+<hr>
+<pre><? php
+clase  Aprendiz
+{
+    // atributos
+    privado  $ nombre ;
+     programa $ privado ;
+     ficha $ privada ;
+    // metodos
+    función  saludar ()
+    {
+        echo  "Estamos Retomando conceptos de la POO en la ficha $ this-> ficha <br>" ;
+    }
+
+    // SETTER DE METODOS
+    function  setNombre ( $ nombre )
+    {
+        $ esto -> nombre = $ nombre ;
+    }
+
+    función  setPrograma ( $ Programa )
+    {
+        $ esto -> programa = $ programa ;
+    }
+    función  setFicha ( $ ficha )
+    {
+        $ esto -> ficha = $ ficha ;
+    }
+
+    // METODOS GETTER
+
+    función  getNombre ()
+    {
+        return  $ this -> nombre ;
+    }
+    función  getPrograma ()
+    {
+        devuelve  $ esto -> programa ;
+    }
+    función  getFicha ()
+    {
+        devuelve  $ esto -> ficha ;
+    }
+}
+
+
+
+// $ galleta = nuevo Aprendiz ();
+// $ galleta-> setNombre ("galletita");
+// echo '...'. $ galleta-> nombre; // nombre debería ser público
+
+$ ob1 = nuevo  Aprendiz ();
+$ ob1 -> setNombre ( "Lary" );
+$ ob1 -> setPrograma ( 'ADSI' );
+$ ob1 -> setFicha ( "2142345" );
+
+echo  'Me llamo' . $ ob1 -> getNombre (). 'estudio ...' . $ ob1 -> getPrograma ();
+echo  '<br>' ;
+$ ob1 -> saludar ();</pre>
+
+<pre><! DOCTYPE html >
+< html  lang = " en " >
+< cabeza >
+    < meta  charset = " UTF-8 " >
+    < meta  http-equiv = " X-UA-Compatible " content = " IE = edge " >
+    < meta  name = " viewport " content = " width = device-width, initial-scale = 1.0 " >
+    < script  src = " poo.js " > </ script >
+    < título > Documento </ título >
+</ cabeza >
+< cuerpo >
+    
+</ cuerpo >
+</ html ></pre>
+<pre>class  Persona {
+    constructor ( nombre , apellido ) {
+        esto . _nombre = nombre ;
+        esto . _a Apellido = apellido ;
+    }
+    obtener  nombre ( ) {
+        devuelve  esto . _nombre ;
+    }
+    set  nombre ( nombre ) {
+        esto . _nombre = nombre ;
+    }
+    obtener  apellido ( ) {
+        devuelve  esto . _a Apellidos ;
+    }
+    establecer  apellido ( apellido ) {
+        esto . _a Apellido = apellido ;
+    }
+    nombreCompleto ( ) {
+        devuelve  esto . _nombre + '' + esto . _a Apellidos ; 
+    }
+}
+
+class  Aprendiz  extiende  Persona {
+    constructor ( nombre , apellido , programa , ficha ) {
+        super ( nombre , apellido ) ;
+        esto . _programa = programa ;
+        esto . _ficha = ficha ;
+    }
+    obtener  programa ( ) {
+        devuelve  esto . _programa ;
+    }
+    set  programa ( programa ) {
+        esto . _programa = programa ;
+    }
+
+     obtener  ficha ( ) {
+         devuelve  esto . _ficha ;
+     }
+      set  ficha ( ficha ) {
+          esto . _ficha = ficha ;
+      }
+
+      setFicha ( ficha ) {
+          esto . _ficha = ficha ;
+      }
+}
+
+class  Grupo {
+    constructor ( conjunto ) {
+        esto . _conjunto = conjunto ;
+    }
+}
+
+var  ap = new  Aprendiz ( 'Javier' , 'Aguirre' , 'ADSO' , '2254040' ) ;
+var  ap1 = new  Aprendiz ( 'Tania' , 'Arroyo' , 'ADSO' , '2254040' ) ;
+var  migrupo = new  Array ( ) ;
+migrupo . empujar ( ap ) ;
+migrupo . empujar ( ap1 ) ;
+
+var  clase = nuevo  Grupo ( migrupo ) ;
+
+
+consola . log ( ap . nombreCompleto ( ) ) ;
+consola . log ( ap ) ;
+ap . setFicha ( '121212' ) ;
+consola . log ( ap ) ;
+const  per = nueva  Persona ( 'Angela' , 'Lopez' ) ;
+consola . log ( por . nombreCompleto ( ) ) ;
+consola . log ( por . apellido ) ;
+por . apellido = 'Sánchez' ;
+consola . log ( por . nombreCompleto ( ) ) ;
+consola . log ( por . apellido ) ;</pre>
+</pre>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portafolio personal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <section class="banner" id="home">
+
+        <div class="imgSidebar">
+            <img src="bra.jpeg" alt="">
+        </div>
+       <div class="contentBx">
+        <h5 class="logoText">my_portafolio</h5>
+        <div>
+            <h4><span>hola</span>soy</h4>
+            <h2>brayan alejandro cancelado </h2>
+            <h4>soy un desarollador web</h4>
+            <p>me llamo brayan alejandro soy un estudiante de adsi
+            de quinto trimestre soy un estudiante de anilisis y desarrollo de sistemas de informacion,
+            aparte estudie cursos de ingles cortos tengo otro tipo de cursos como de microsoft office
+            y curso aparte de powert point,exel </p>
+            <a href="#" class="btn">aboutme</a>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="instagram.png" alt=""></a></li>
+        </ul>
+       </div>
+    </section>
+
+    <section class="about" id="sobre mi">
+        <div class="title white">
+            <h2>Sobre Mi</h2>
+            <p>Intenta aprender algo sobre todo y todo sobre algo.</p>
+        </div>
+        <div class="content">
+            <div class="textBx">
+                <p>me llamo brayan alejandro Cancelado, tengo 19 años de edad vivo en soacha sanicolas
+                    estoy estudiando en la institucion de sena , he hecho varios cursos cortos de ingles,
+                    de microsoft y en el colegio maneje algo de tecnico en sistemas,
+                     eh trabajado en varios oficios como ayudante de pasteleria , en ventas 
+                    por internet , en construccion</p>
+
+            </div>
+            <div class="imgBx">
+                <img src="bra.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="services " id="servicios">
+        <div class="title ">
+            <h2>mis servicios</h2>
+            <p>te mostrare lo que se hacer y en lo que me puedo desempeñar</p>
+            <div class="content">
+                <div class="servicesBx">
+                    <img src="icon1.png" alt="">
+                    <h2>html</h2>
+                    <p>te prodria ayudar hacer el front end comenzar desde cero tu pagina con html5 </p>
+                </div>
+                <div class="servicesBx">
+                    <img src="icon2.png" alt="">
+                    <h2>css</h2>
+                    <p>te prodria ayudar hacer el front end a darle estilo a tu pagina con css </p>
+                </div>
+                <div class="servicesBx">
+                    <img src="icon3.png" alt="">
+                    <h2>javascript</h2>
+                    <p>con javascript puedo darle ese toque de interaccion a tu sitio web  </p>
+                </div>
+                <div class="servicesBx">
+                    <img src="icon4.png" alt="">
+                    <h2>php</h2>
+                    <p>HP favorece a la conexión entre el servidor y a la interfaz del usuario. </p>
+                </div>
+                <div class="servicesBx">
+                    <img src="icon5.png" alt="">
+                    <h2>Mysql</h2>
+                    <p> es un sistema de administración de bases de datos,no es más que una aplicación ,
+                        permite gestionar archivos llamados de bases de datos.</p>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="work"></section>
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">home</a></li>
+            <li><a href="#sobre mi" onclick="toggleMenu();">sobre mi</a></li>
+            <li><a href="#servicios" onclick="toggleMenu();">servicios</a></li>
+            <li><a href="resgistrar/index.php">trabajos</a></li>
+            <li><a href="#">manuales</a></li>
+            <li><a href="Javascript/javas.html">java</a></li>
+            <li><a href="#">contacto</a></li>
+        </ul>
+    </div>
+    
+    
+    
+    
+    <script>
+        function toggleMenu(){
+            const menutoggle= document.querySelector('.toggle')
+            const sidebar= document.querySelector('.sidebar')
+            menutoggle.classList.toggle('active')
+            sidebar.classList.toggle('active')
+        }
+    </script>
+    
+</body>
+</html>
